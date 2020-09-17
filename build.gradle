@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.atherys'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://papermc.io/repo/repository/maven-public/"
+    }
+    maven {
+        url "https://jitpack.io"
+    }
+}
+
+dependencies {
+    compile 'com.github.Atherys-Horizons:AtherysDTOs:master-SNAPSHOT'
+    compileOnly 'io.github.waterfallmc:waterfall-api:1.12-SNAPSHOT'
+}
