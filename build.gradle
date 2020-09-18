@@ -17,5 +17,5 @@ repositories {
 
 dependencies {
     compile 'com.github.Atherys-Horizons:AtherysDTOs:master-SNAPSHOT'
-    compileOnly 'io.github.waterfallmc:waterfall-api:1.12-SNAPSHOT'
+    compileOnly 'io.github.waterfallmc:waterfall-api:1.15-SNAPSHOT'
 }

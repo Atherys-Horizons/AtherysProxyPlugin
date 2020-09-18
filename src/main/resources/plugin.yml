@@ -1,0 +1,4 @@
+name: AtherysProxyPlugin
+version: 1.0.0
+main: com.atherys.proxy.AtherysProxyPlugin
+author: Atherys
