@@ -15,12 +15,12 @@ public class AtherysProxyPlugin extends Plugin implements Listener {
     public void onEnable() {
         instance = this;
 
-        getProxy().registerChannel("atherysproxyplugin:main");
+        getProxy().registerChannel("atherysproxy:main");
     }
 
     @EventHandler
     public void onPluginMessage(PluginMessageEvent pluginMessageEvent) {
-        if ("atherysproxyplugin:main".equals(pluginMessageEvent.getTag())) {
+        if ("atherysproxy:main".equals(pluginMessageEvent.getTag())) {
             ProxyCommand command = ProxyCommandService.getInstance().resolve(pluginMessageEvent.getData());
             command.run();
         }
