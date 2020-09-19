@@ -16,6 +16,8 @@ public class AtherysProxyPlugin extends Plugin implements Listener {
         instance = this;
 
         getProxy().registerChannel("atherysproxy:main");
+
+        this.getProxy().getPluginManager().registerListener(this, this);
     }
 
     @EventHandler

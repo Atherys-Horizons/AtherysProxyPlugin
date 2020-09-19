@@ -28,7 +28,7 @@ public class RegisterServerCommand implements ProxyCommand {
                 dto.getName(),
                 inetSocketAddress,
                 dto.getMotd(),
-                false
+                true
         );
 
         proxyServer.getServers().put(dto.getKey(), serverInfo);

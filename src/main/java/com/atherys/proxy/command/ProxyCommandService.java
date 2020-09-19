@@ -27,8 +27,8 @@ public class ProxyCommandService {
     }
 
     public ProxyCommand resolve(byte[] data) {
-        String commandKey = new String(new byte[]{data[0], data[1]});
-        String jsonData = new String(Arrays.copyOfRange(data, 2, data.length));
+        String commandKey = new String(new byte[]{data[1], data[2]});
+        String jsonData = new String(Arrays.copyOfRange(data, 3, data.length));
 
 
         switch (commandKey) {
@@ -39,7 +39,7 @@ public class ProxyCommandService {
             case UnregisterServerDTO.KEY:
                 return new UnregisterServerCommand(gson.fromJson(jsonData, UnregisterServerDTO.class));
             default:
-                return new ErroringProxyCommand("Could not identify command, invalid key.");
+                return new ErroringProxyCommand("Could not identify command, invalid key: " + new String(data));
         }
     }
 }
